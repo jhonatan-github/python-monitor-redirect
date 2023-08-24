@@ -1,0 +1,23 @@
+# Verificador de Redirecionamento HTTP (check-redirect.py)
+
+Este é um script simples em Python que verifica se as URLs em um arquivo estão sofrendo redirecionamentos HTTP. Ele utiliza a biblioteca `requests` para fazer solicitações HTTP e determinar se uma URL está sendo redirecionada permanentemente (código de status 301) ou não.
+
+## Requisitos
+
+Certifique-se de ter o Python instalado em sua máquina. O script utiliza a biblioteca `requests` para fazer solicitações HTTP. Você pode instalar essa biblioteca usando o seguinte comando:
+
+
+pip install requests
+
+Uso
+Crie um arquivo de texto contendo as URLs que você deseja verificar. Cada URL deve estar em uma linha separada.
+
+Execute o script fornecendo o nome do arquivo contendo as URLs como argumento:
+
+python check-redirect.py urls.txt
+Onde urls.txt é o nome do arquivo de texto com as URLs.
+
+O script percorrerá as URLs, fará solicitações HEAD para cada uma delas com redirecionamentos desativados e informará se a URL está sofrendo um redirecionamento permanente (status 301) ou não. As URLs que não estão sendo redirecionadas são registradas em um arquivo chamado no_redirects.txt.
+
+Contribuição
+Se você deseja contribuir para melhorar este script, fique à vontade para enviar um pull request ou fornecer feedback por meio das issues.
